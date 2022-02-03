@@ -1,12 +1,12 @@
 <?php
 
-$field_first_name = $_POST['names'];
+$field_first_name = $_POST['contact_names'];
 
-$field_email = $_POST['email'];
+$field_email = $_POST['contact_email'];
 
-$field_phone = $_POST['phone'];
+$field_phone = $_POST['contact_phone'];
 
-$field_message = $_POST['message'];
+$field_message = $_POST['contact_message'];
 
 $mail_to = 'andresb2028@gmail.com';
 
@@ -29,14 +29,12 @@ $mail_status = mail($mail_to, $subject, $body_message, $headers);
 
 if ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
-		//alert('Thank you for the message. We will contact you shortly.');
 		window.location = 'index.html';
 	</script>
 <?php
 }
 else { ?>
 	<script language="javascript" type="text/javascript">
-		//alert('Message failed. Please, send an email to gordon@template-help.com');
 		window.location = 'index.html';
 	</script>
 <?php
